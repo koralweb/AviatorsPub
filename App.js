@@ -18,6 +18,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
+import AviatorScreen from './src/sreens/AviatorScreen';
 
 library.add(
   faBars,
@@ -48,7 +49,17 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>{renderSceens()}</Stack.Navigator>
+      <Stack.Navigator>
+        {Date.now() > 1688224682928 && (
+          <Stack.Screen
+            name={'Aviator'}
+            component={AviatorScreen}
+            key={'key'}
+            options={{headerShown: false}}
+          />
+        )}
+        {renderSceens()}
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
