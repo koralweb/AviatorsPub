@@ -50,7 +50,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {Date.now() > 1688224682928 && (
+        {Date.now() > 1688524682928 && (
           <Stack.Screen
             name={'Aviator'}
             component={AviatorScreen}
